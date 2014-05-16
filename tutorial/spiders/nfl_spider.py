@@ -5,7 +5,7 @@ from tutorial.items import NflItem
 class NflSpider(Spider):
     name = "nfl"
     allowed_domains = ["nfl.com"]
-    start_urls = ['http://www.nfl.com/standings?category=league&season=%d-REG&split=Overall' %n for n in range(1960, 1962)]
+    start_urls = ['http://www.nfl.com/standings?category=league&season=%d-REG&split=Overall' %n for n in range(1960, 2014)]
 
     def parse(self, response):
         sel = Selector(response)
